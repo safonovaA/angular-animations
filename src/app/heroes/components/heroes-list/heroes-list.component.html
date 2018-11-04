@@ -1,0 +1,36 @@
+<app-loader *ngIf="loading"></app-loader>
+<ng-container *ngIf="!loading">
+  <div class="toolbar">
+    <div class="total-count">{{totalResults}}&nbsp;heroes come to Nexus!</div>
+    <div class="page-size">
+      <span>Page size:</span>
+      <ul>
+        <li
+          class="page-size-control"
+          (click)="changePageSize(10)"
+          tabindex="0"
+          (keydown.space)="changePageSize(10)"
+          (keydown.enter)="changePageSize(10)"
+          [ngClass]="{'active' : pageSize === 10}">10</li>
+        <li
+          class="page-size-control"
+          (click)="changePageSize(20)"
+          tabindex="0"
+          (keydown.space)="changePageSize(20)"
+          (keydown.enter)="changePageSize(20)"
+          [ngClass]="{'active' : pageSize === 20}">20</li>
+        <li
+          class="page-size-control"
+          (click)="changePageSize(50)"
+          tabindex="0"
+          (keydown.space)="changePageSize(50)"
+          (keydown.enter)="changePageSize(50)"
+          [ngClass]="{'active' : pageSize === 50}">50</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card-container">
+    <app-card *ngFor="let hero of heroes" [hero]="hero"></app-card>
+  </div>
+  <app-pagination *ngIf="totalPages > 1" [current]="currentPage" [total]="totalPages" (goTo)="onGoTo($event)"></app-pagination>
+</ng-container>

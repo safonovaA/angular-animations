@@ -1,0 +1,27 @@
+
+<nav>
+  <ul>
+    <li *ngIf="current !== 1" (click)="navigate(current - 1)">
+      <a 
+        tabindex="0"
+        (keydown.space)="navigate(current - 1)"
+        (keydown.enter)="navigate(current - 1)">previous</a>
+    </li>
+    <li
+      *ngFor="let number of base"
+      [ngClass]="{'active' : number === current}"
+      (click)="navigate(number)">
+      <a
+        tabindex="0"
+        (keydown.space)="navigate(number)"
+        (keydown.enter)="navigate(number)"
+      >{{number}}</a>
+    </li>
+    <li *ngIf="current !== total" (click)="navigate(current + 1)">
+      <a
+        tabindex="0"
+        (keydown.space)="navigate(current + 1)"
+        (keydown.enter)="navigate(current + 1)">next</a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,43 @@
+@import '~src/app/shared/mixins/media.scss';
+:host {
+  width: 100%;
+  @include medium {
+    width: 50%;
+  }
+}
+.card {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+  border-left: 4px solid rgba(142, 117, 252, 0.7);
+}
+.details {
+  margin-left: 0.75rem;
+}
+.name {
+  margin: 0;
+}
+.icon {
+  width: 95px;
+  height: 95px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 30px rgba(142, 117, 252, 0.781);
+}
+.role {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('/assets/img/icon-role-sprite.png') no-repeat;
+}
+.specialist {
+  background-position: 100% 0;
+}
+.warrior {
+  background-position: 80% 0;
+}
+.support {
+  background-position: 55% 0;
+}
+.multiclass {
+  background-position: 25% 0;
+}

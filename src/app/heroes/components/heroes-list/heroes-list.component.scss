@@ -1,0 +1,37 @@
+:host{
+  width: 100%;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+
+  .page-size {
+    display: flex;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  .page-size-control {
+    padding: 0 0.5rem;
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    &.active {
+      font-weight: 700;
+    }
+  }
+  .page-size-control:not(:last-child) {
+    border-right: 1px solid #fff;
+  }
+}

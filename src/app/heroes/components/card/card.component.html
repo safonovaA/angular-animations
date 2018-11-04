@@ -1,0 +1,11 @@
+<div class="card">
+  <img class="icon" [src]="'/assets/img/heroes/'+hero.short_name+'/'+hero.short_name+'.png'" [alt]="hero.name">
+  <!-- <img [src]="'https://blzmedia-a.akamaihd.net/heroes/'+hero.short_name+'/bust.jpg'" alt=""> -->
+  <div class="details">
+    <h2 class="name" *ngIf="hero">
+      {{hero.name}}
+    </h2>
+    <p><span [class]="hero.role.toLowerCase() +' role'"></span>{{hero.role}}</p>
+    <p>{{hero.type}}</p>
+  </div>
+</div>
