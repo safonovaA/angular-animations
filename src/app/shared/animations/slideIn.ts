@@ -9,15 +9,15 @@ export const slideInAnimation =
           position: 'absolute',
           opacity: 1,
         })
-      ]),
+      ], {optional: true}),
       query(':enter', [
         style({ opacity: 0 })
       ]),
-      query(':leave', animateChild()),
+      query(':leave', animateChild(), {optional : true}),
       group([
         query(':leave', [
           animate('500ms ease-out', style({ opacity: 0 }))
-        ]),
+        ], {optional: true}),
         query(':enter', [
           animate('1s ease-out', style({opacity: 1}))
         ])

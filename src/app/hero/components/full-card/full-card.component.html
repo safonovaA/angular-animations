@@ -1,0 +1,7 @@
+<div @card class="card" *ngIf="hero">
+  <img class="icon" [src]="'https://blzmedia-a.akamaihd.net/heroes/'+hero.short_name+'/bust.jpg'" alt="">
+  <div class="details">
+    <h2>{{hero.name}}</h2>
+    <p>Some details</p>
+  </div>
+</div>

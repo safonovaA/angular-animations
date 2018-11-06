@@ -1,9 +1,8 @@
 <div class="card" [id]="'card-' + index">
   <img class="icon" [src]="'/assets/img/heroes/'+hero.short_name+'/'+hero.short_name+'.png'" [alt]="hero.name">
-  <!-- <img [src]="'https://blzmedia-a.akamaihd.net/heroes/'+hero.short_name+'/bust.jpg'" alt=""> -->
   <div class="details">
     <h2 class="name" *ngIf="hero">
-      {{hero.name}}
+      <a [routerLink]="['/hero', hero.short_name]">{{hero.name}}</a>
     </h2>
     <p><span [class]="hero.role.toLowerCase() +' role'"></span>{{hero.role}}</p>
     <p>{{hero.type}}</p>

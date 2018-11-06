@@ -10,19 +10,35 @@
   padding: 1rem;
   margin: 1rem;
   border-left: 4px solid rgba(142, 117, 252, 0.7);
+  &:hover {
+    border-left: 4px solid rgba(202, 96, 188, 0.7);
+  }
 }
 .details {
   margin-left: 0.75rem;
 }
+
 .name {
   margin: 0;
+
+  & a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
 }
 .icon {
   width: 95px;
   height: 95px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 30px rgba(142, 117, 252, 0.781);
 }
+.card:hover .icon {
+  border: 2px solid rgba(202, 96, 188, 0.7);
+  box-shadow: 0 0 30px rgba(243, 65, 213, 0.7);
+} 
 .role {
   display: inline-block;
   width: 16px;
