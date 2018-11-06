@@ -30,7 +30,7 @@
     </div>
   </div>
   <div class="card-container">
-    <app-card *ngFor="let hero of heroes" [hero]="hero"></app-card>
+    <app-card *ngFor="let hero of heroes; let i = index" [hero]="hero" [index]="i"></app-card>
   </div>
   <app-pagination *ngIf="totalPages > 1" [current]="currentPage" [total]="totalPages" (goTo)="onGoTo($event)"></app-pagination>
 </ng-container>

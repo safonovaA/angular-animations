@@ -15,7 +15,8 @@ import { trigger, transition, style, animate, keyframes } from '@angular/animati
           style({ transform: 'scale(2)', offset: 0.3 }),
           style({ transform: 'scale(1)', offset: 0.75 }),
           style({ transform: 'scale(2)', offset: 1 }),
-        ])),
+        ]),
+        ),
       ]),
       transition(':leave', [
         animate('1s', style({opacity: 0}))
